@@ -51,7 +51,6 @@ abstract class GameRoomModal extends State<GameRoomView> with WidgetsBindingObse
     try {
       _roomReferance = FirebaseDatabase.instance.ref().child('rooms/${widget.roomId}');
       DataSnapshot roomSnapshot = await _roomReferance.get();
-      debugPrint(roomSnapshot.value.toString());
       if (roomSnapshot.exists) {
         if (mounted) updateController((roomSnapshot.value as Map<Object?, Object?>).cast<String, dynamic>(), context);
         _playerIndex = _controller.addPlayer(widget.nick);

@@ -20,7 +20,7 @@ class GameRoomView extends StatefulWidget {
     required this.nick,
   }) : super(key: key);
 
-  final String roomId;
+  final String? roomId;
   final String? nick;
 
   @override
@@ -30,6 +30,11 @@ class GameRoomView extends StatefulWidget {
 class _GameRoomViewState extends GameRoomModal {
   @override
   Widget build(BuildContext context) {
+    if (widget.roomId == null || widget.roomId!.isEmpty) {
+      return ErrorScreen(
+        error: AppStrings.invalidRoom,
+      );
+    }
     if (isLoading) {
       return const Screen(
         children: [
@@ -56,7 +61,7 @@ class _GameRoomViewState extends GameRoomModal {
           updateController(data, context);
           if (!controller.roomIsFull) {
             return WaitingScreen(
-              roomId: widget.roomId,
+              roomId: widget.roomId!,
             );
           }
           return Screen(
