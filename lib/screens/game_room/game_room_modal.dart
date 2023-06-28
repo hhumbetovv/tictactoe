@@ -48,16 +48,18 @@ abstract class GameRoomModal extends State<GameRoomView> with WidgetsBindingObse
     setState(() {
       _isLoading = true;
     });
-    try {
-      _roomReferance = FirebaseDatabase.instance.ref().child('rooms/${widget.roomId}');
-      DataSnapshot roomSnapshot = await _roomReferance.get();
-      if (roomSnapshot.exists) {
-        if (mounted) updateController((roomSnapshot.value as Map<Object?, Object?>).cast<String, dynamic>(), context);
-        _playerIndex = _controller.addPlayer(widget.nick);
+    if (widget.roomId != null && widget.roomId!.isNotEmpty) {
+      try {
+        _roomReferance = FirebaseDatabase.instance.ref().child('rooms/${widget.roomId}');
+        DataSnapshot roomSnapshot = await _roomReferance.get();
+        if (roomSnapshot.exists) {
+          if (mounted) updateController((roomSnapshot.value as Map<Object?, Object?>).cast<String, dynamic>(), context);
+          _playerIndex = _controller.addPlayer(widget.nick);
+        }
+        if (_playerIndex != -1) await _roomReferance.set(_controller.toJson());
+      } catch (e) {
+        debugPrint(e.toString());
       }
-      if (_playerIndex != -1) await _roomReferance.set(_controller.toJson());
-    } catch (e) {
-      debugPrint(e.toString());
     }
     setState(() {
       _isLoading = false;
