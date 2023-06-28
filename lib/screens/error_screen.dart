@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../constants/app_colors.dart';
 import '../constants/app_strings.dart';
 import '../widgets/app_text.dart';
 import '../widgets/neon_button.dart';
@@ -20,7 +21,8 @@ class ErrorScreen extends StatelessWidget {
     return Screen(
       children: [
         AppText(text: error ?? AppStrings.defaultError),
-        NeonButton(
+        NeonButton.withColor(
+          color: AppColors.text,
           text: AppStrings.backMenu,
           onTap: () {
             context.go(MainView.route);
