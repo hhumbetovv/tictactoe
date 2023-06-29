@@ -1,17 +1,15 @@
 class PlayerModel {
-  late final String _nick;
-  late final String _value;
-  late int _point = 0;
+  final String _nick;
+  final String _value;
+  int _point = 0;
 
   PlayerModel({
     required String nick,
     required String value,
     int point = 0,
-  }) {
-    _nick = nick;
-    _value = value;
-    _point = point;
-  }
+  })  : _nick = nick,
+        _value = value,
+        _point = point;
 
   Map<String, dynamic> toJson() {
     return {

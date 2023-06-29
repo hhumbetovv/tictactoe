@@ -8,22 +8,20 @@ class NeonInput extends StatelessWidget {
     Key? key,
     required this.controller,
     required this.hintText,
-  }) : super(key: key) {
-    _color = AppColors.primaryNeon;
-  }
+  })  : _color = AppColors.primaryNeon,
+        super(key: key);
 
-  NeonInput.withColor({
+  const NeonInput.withColor({
     Key? key,
     required this.controller,
     required this.hintText,
     required Color color,
-  }) : super(key: key) {
-    _color = color;
-  }
+  })  : _color = color,
+        super(key: key);
 
   final TextEditingController controller;
   final String hintText;
-  late final Color _color;
+  final Color _color;
 
   @override
   Widget build(BuildContext context) {

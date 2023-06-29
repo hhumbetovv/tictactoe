@@ -9,14 +9,13 @@ class BoardCell extends StatelessWidget {
     required this.onTap,
     required this.value,
     required this.isOffline,
-  }) : super(key: key) {
-    color = AppColors.getPlayerColor(value, isOffline);
-  }
+  })  : color = AppColors.getPlayerColor(value, isOffline),
+        super(key: key);
 
   final Function() onTap;
   final String value;
   final bool isOffline;
-  late final Color color;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {

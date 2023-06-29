@@ -7,20 +7,18 @@ class TitleText extends StatelessWidget {
   TitleText({
     Key? key,
     required this.text,
-  }) : super(key: key) {
-    _color = AppColors.primaryNeon;
-  }
+  })  : _color = AppColors.primaryNeon,
+        super(key: key);
 
-  TitleText.withColor({
+  const TitleText.withColor({
     Key? key,
     required this.text,
     required Color color,
-  }) : super(key: key) {
-    _color = color;
-  }
+  })  : _color = color,
+        super(key: key);
 
   final String text;
-  late final Color _color;
+  final Color _color;
 
   @override
   Widget build(BuildContext context) {

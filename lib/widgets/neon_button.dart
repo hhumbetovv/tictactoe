@@ -9,23 +9,21 @@ class NeonButton extends StatelessWidget {
     required this.text,
     this.onTap,
     this.isLoading = false,
-  }) : super(key: key) {
-    _color = AppColors.primaryNeon;
-  }
+  })  : _color = AppColors.primaryNeon,
+        super(key: key);
 
-  NeonButton.withColor({
+  const NeonButton.withColor({
     Key? key,
     required this.text,
     required Color color,
     this.onTap,
     this.isLoading = false,
-  }) : super(key: key) {
-    _color = color;
-  }
+  })  : _color = color,
+        super(key: key);
 
   final String text;
   final Function()? onTap;
-  late final Color _color;
+  final Color _color;
   final bool isLoading;
 
   @override

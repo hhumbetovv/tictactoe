@@ -4,18 +4,16 @@ import '../utils/extensions.dart';
 
 class GameController {
   List<String> _board = ['', '', '', '', '', '', '', '', ''];
-  late List<PlayerModel> _players;
-  late bool _isOffline;
+  List<PlayerModel> _players;
+  final bool _isOffline;
   int _turnIndex = 0;
   final int _maxRound = 3;
 
   GameController({
     required List<PlayerModel> players,
     bool isOffline = true,
-  }) {
-    _isOffline = isOffline;
-    _players = players;
-  }
+  })  : _isOffline = isOffline,
+        _players = players;
 
   Map<String, dynamic> toJson() {
     return {
