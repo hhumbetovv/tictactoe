@@ -6,7 +6,7 @@ import '../../widgets/neon_button.dart';
 import '../../widgets/neon_input.dart';
 import '../../widgets/screen.dart';
 import '../../widgets/title_text.dart';
-import 'join_room_modal.dart';
+import 'join_room_model.dart';
 
 class JoinRoomView extends StatefulWidget {
   static String get route => '/join_room';
@@ -18,7 +18,7 @@ class JoinRoomView extends StatefulWidget {
   State<JoinRoomView> createState() => _JoinRoomViewState();
 }
 
-class _JoinRoomViewState extends JoinRoomModal {
+class _JoinRoomViewState extends JoinRoomModel {
   @override
   Widget build(BuildContext context) {
     return Screen(

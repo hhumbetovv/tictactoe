@@ -6,7 +6,7 @@ import '../../utils/extensions.dart';
 import '../game_room/game_room_view.dart';
 import 'join_room_view.dart';
 
-abstract class JoinRoomModal extends State<JoinRoomView> {
+abstract class JoinRoomModel extends State<JoinRoomView> {
   late final TextEditingController _nickController;
   late final TextEditingController _roomIdController;
   final bool _isLoading = false;

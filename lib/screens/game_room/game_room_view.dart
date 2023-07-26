@@ -10,7 +10,7 @@ import '../../widgets/screen.dart';
 import '../../widgets/turn_text.dart';
 import '../error_screen.dart';
 import '../waiting_screen.dart';
-import 'game_room_modal.dart';
+import 'game_room_model.dart';
 
 class GameRoomView extends StatefulWidget {
   static String get route => '/game_room';
@@ -27,7 +27,7 @@ class GameRoomView extends StatefulWidget {
   State<GameRoomView> createState() => _GameRoomViewState();
 }
 
-class _GameRoomViewState extends GameRoomModal {
+class _GameRoomViewState extends GameRoomModel {
   @override
   Widget build(BuildContext context) {
     if (widget.roomId == null || widget.roomId!.isEmpty) {

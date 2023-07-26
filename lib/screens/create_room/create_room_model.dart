@@ -9,7 +9,7 @@ import '../../utils/extensions.dart';
 import '../game_room/game_room_view.dart';
 import 'create_room_view.dart';
 
-abstract class CreateRoomModal extends State<CreateRoomView> {
+abstract class CreateRoomModel extends State<CreateRoomView> {
   late final TextEditingController _nickController;
   bool _isLoading = false;
 

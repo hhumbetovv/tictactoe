@@ -1,5 +1,5 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/home/theternal/Development/flutter
+FLUTTER_ROOT=/home/theternal/snap/flutter/common/flutter
 FLUTTER_APPLICATION_PATH=/home/theternal/Desktop/Development/Flutter Projects/For Github/tictactoe
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_TARGET=lib/main.dart

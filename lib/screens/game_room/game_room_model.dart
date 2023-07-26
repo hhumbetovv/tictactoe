@@ -11,7 +11,7 @@ import '../../models/player.dart';
 import '../main/main_view.dart';
 import 'game_room_view.dart';
 
-abstract class GameRoomModal extends State<GameRoomView> with WidgetsBindingObserver {
+abstract class GameRoomModel extends State<GameRoomView> with WidgetsBindingObserver {
   final GameController _controller = GameController(players: [], isOffline: false);
   late final DatabaseReference _roomReferance;
   int _playerIndex = -1;

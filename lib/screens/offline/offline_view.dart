@@ -6,7 +6,7 @@ import '../../components/score_board.dart';
 import '../../constants/app_colors.dart';
 import '../../widgets/screen.dart';
 import '../../widgets/turn_text.dart';
-import 'offline_modal.dart';
+import 'offline_model.dart';
 
 class OfflineView extends StatefulWidget {
   static String get route => '/offline';
@@ -18,7 +18,7 @@ class OfflineView extends StatefulWidget {
   State<OfflineView> createState() => _OfflineViewState();
 }
 
-class _OfflineViewState extends OfflineModal {
+class _OfflineViewState extends OfflineModel {
   @override
   Widget build(BuildContext context) {
     return Screen(

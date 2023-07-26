@@ -5,7 +5,7 @@ import '../../widgets/neon_button.dart';
 import '../../widgets/neon_input.dart';
 import '../../widgets/screen.dart';
 import '../../widgets/title_text.dart';
-import 'create_room_modal.dart';
+import 'create_room_model.dart';
 
 class CreateRoomView extends StatefulWidget {
   static String get route => '/create_room';
@@ -17,7 +17,7 @@ class CreateRoomView extends StatefulWidget {
   State<CreateRoomView> createState() => _CreateRoomViewState();
 }
 
-class _CreateRoomViewState extends CreateRoomModal {
+class _CreateRoomViewState extends CreateRoomModel {
   @override
   Widget build(BuildContext context) {
     return Screen(

@@ -8,7 +8,7 @@ import '../../models/player.dart';
 import '../../utils/extensions.dart';
 import 'offline_view.dart';
 
-abstract class OfflineModal extends State<OfflineView> {
+abstract class OfflineModel extends State<OfflineView> {
   final GameController controller = GameController(players: [
     PlayerModel(nick: ''.playerOneNick, value: AppStrings.playerOneValue),
     PlayerModel(nick: ''.playerTwoNick, value: AppStrings.playerTwoValue),
