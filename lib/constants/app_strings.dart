@@ -8,6 +8,7 @@ class AppStrings {
   static String get createRoom => 'Create Room';
   static String get joinRoom => 'Join Room';
   static String get playOffline => 'Play Offline';
+  static String get withAI => 'With AI';
   //! Placeholders
   static String get nickPlaceholder => 'Enter Your Nickname';
   static String get roomIdPlaceholder => 'Enter Room Id';

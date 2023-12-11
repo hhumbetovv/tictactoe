@@ -6,6 +6,7 @@ import 'screens/game_room/game_room_view.dart';
 import 'screens/join_room/join_room_view.dart';
 import 'screens/main/main_view.dart';
 import 'screens/offline/offline_view.dart';
+import 'screens/with_ai/with_ai_view.dart';
 
 GoRouter appRouter = GoRouter(
   routes: [
@@ -33,6 +34,10 @@ GoRouter appRouter = GoRouter(
     GoRoute(
       path: OfflineView.route,
       builder: (context, state) => const OfflineView(),
+    ),
+    GoRoute(
+      path: WithAIView.route,
+      builder: (context, state) => const WithAIView(),
     ),
   ],
   errorBuilder: (context, state) {

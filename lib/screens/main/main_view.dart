@@ -10,6 +10,7 @@ import '../../widgets/title_text.dart';
 import '../create_room/create_room_view.dart';
 import '../join_room/join_room_view.dart';
 import '../offline/offline_view.dart';
+import '../with_ai/with_ai_view.dart';
 
 class MainView extends StatelessWidget {
   static String get route => '/';
@@ -37,6 +38,11 @@ class MainView extends StatelessWidget {
           text: AppStrings.playOffline,
           color: AppColors.secondaryNeon,
           onTap: () => kIsWeb ? context.go(OfflineView.route) : context.push(OfflineView.route),
+        ),
+        NeonButton.withColor(
+          text: AppStrings.withAI,
+          color: AppColors.neon,
+          onTap: () => kIsWeb ? context.go(WithAIView.route) : context.push(WithAIView.route),
         ),
       ],
     );

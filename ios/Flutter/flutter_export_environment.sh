@@ -1,6 +1,6 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/home/theternal/snap/flutter/common/flutter"
+export "FLUTTER_ROOT=/home/theternal/Development/flutter"
 export "FLUTTER_APPLICATION_PATH=/home/theternal/Desktop/Development/Flutter Projects/For Github/tictactoe"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"

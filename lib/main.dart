@@ -35,6 +35,7 @@ class TicTacToe extends StatelessWidget {
           theme: ThemeData(
             scaffoldBackgroundColor: AppColors.background,
             fontFamily: 'Orbitron',
+            useMaterial3: false,
           ),
           debugShowCheckedModeBanner: false,
           routerConfig: appRouter,

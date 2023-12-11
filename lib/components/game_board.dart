@@ -9,10 +9,12 @@ class GameBoard extends StatelessWidget {
     Key? key,
     required this.controller,
     required this.onTap,
+    this.withAi = false,
   }) : super(key: key);
 
   final GameController controller;
   final Function(int index) onTap;
+  final bool withAi;
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +36,7 @@ class GameBoard extends StatelessWidget {
               onTap: () => onTap(index),
               value: controller.board[index],
               isOffline: controller.isOffline,
+              withAi: withAi,
             );
           },
         ),
